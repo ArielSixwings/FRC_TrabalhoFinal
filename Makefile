@@ -17,7 +17,7 @@ EXEC = message_app
 
 #Directory of source code:
 DIR_SOURCE = source
-SOURCE = $(wildcard $(DIR_SOURCE)/*.c)
+SOURCE = $(wildcard $(DIR_SOURCE)/*.cpp)
 
 # Directory of includeded headers and headers:
 DIR_INCLUDE = includes
@@ -25,10 +25,10 @@ INCLUDE = $(wildcard $(DIR_INCLUDE)/*.h)
 
 # Directory of objects and objects:
 DIR_OBJ = Objects
-OBJS= $(addprefix $(DIR_OBJ)/,$(notdir $(SOURCE:.c=.o)))
+OBJS= $(addprefix $(DIR_OBJ)/,$(notdir $(SOURCE:.cpp=.o)))
 
 # Compiler and flags:
-CC = gcc
+CC = g++
 LIBS = -pthread
 CFLAGS = # -c -Wall -W -Wextra -I $(DIR_INCLUDE)
 
